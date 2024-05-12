@@ -1,6 +1,10 @@
 #!/bin/bash
 
 USERID=$(id -u)
+
+SCRIPTNAME=$($0)
+LOGDIR=/home/centos/script-log
+LOGFILE=$LOGDIR/$SCRIPTNAME.log
 Log=$($0).log
 
 Validate(){
@@ -20,10 +24,10 @@ then
   exit 1
 fi
 
-yum install gitt -y $>>$log
+yum install gitt -y $>>$LOGFILE
 
 Validate "git"
 
-yum install postfix -y $>>$log
+yum install postfix -y $>>$LOGFILE
 
 Validate "postfix"
