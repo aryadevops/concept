@@ -4,7 +4,7 @@ USERID=$(id -u)
 
 SCRIPTNAME=$0
 LOGDIR=/home/centos/script-log
-LOGFILE=$LOGDIR/$SCRIPTNAME.log
+LOGFILE=$LOGDIR/logfile.log
 ## Log=$($0).log
 
 Validate(){
