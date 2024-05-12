@@ -2,9 +2,9 @@
 
 USERID=$(id -u)
 
-## SCRIPTNAME=$0
+SCRIPTNAME=$0
 LOGDIR=/home/centos/concept
-LOGFILE=$LOGDIR/logfile.log
+LOGFILE=$LOGDIR/$SCRIPTNAME.log
 ## Log=$($0).log
 
 Validate(){
@@ -24,10 +24,10 @@ then
   exit 1
 fi
 
-yum install git -y $>>$LOGFILE
+yum install git -y &>>$LOGFILE
 
 Validate "git" $?
 
-yum install postfix -y $>>$LOGFILE
+yum install postfix -y &>>$LOGFILE
 
 Validate "postfix" $?
