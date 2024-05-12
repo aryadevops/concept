@@ -3,7 +3,7 @@
 USERID=$(id -u)
 
 SCRIPTNAME=$0
-LOGDIR=/home/centos/script-log
+LOGDIR=/home/centos/concept-logs
 LOGFILE=$LOGDIR/logfile.log
 ## Log=$($0).log
 
