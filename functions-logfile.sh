@@ -2,14 +2,14 @@
 
 USERID=$(id -u)
 
-SCRIPTNAME=$0
+## SCRIPTNAME=$0
 LOGDIR=/home/centos/concept
 LOGFILE=$LOGDIR/logfile.log
 ## Log=$($0).log
 
 Validate(){
 
-if [ $? -ne 0 ]
+if [ $2 -ne 0 ]
 then 
    echo "$1 installation failure..."
 else
@@ -24,10 +24,10 @@ then
   exit 1
 fi
 
-yum install gitt -y $>>$LOGFILE
+yum install git -y $>>$LOGFILE
 
-Validate "git"
+Validate "git" $?
 
 yum install postfix -y $>>$LOGFILE
 
-Validate "postfix"
+Validate "postfix" $?
