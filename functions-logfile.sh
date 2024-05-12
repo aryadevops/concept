@@ -2,10 +2,10 @@
 
 USERID=$(id -u)
 
-SCRIPTNAME=$($0)
+SCRIPTNAME=$0
 LOGDIR=/home/centos/script-log
 LOGFILE=$LOGDIR/$SCRIPTNAME.log
-Log=$($0).log
+## Log=$($0).log
 
 Validate(){
 
