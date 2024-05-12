@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
+Log=$($0).log
 
 Validate(){
 
@@ -19,10 +20,10 @@ then
   exit 1
 fi
 
-yum install gitt -y $$>>File.log
+yum install gitt -y $>>$log
 
 Validate "git"
 
-yum install postfix -y $$>>File.log
+yum install postfix -y $>>$log
 
 Validate "postfix"
