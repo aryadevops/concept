@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 SCRIPTNAME=$0
-LOGDIR=/home/centos/concept
+LOGDIR=/home/centos/concept/log
 LOGFILE=$LOGDIR/$SCRIPTNAME.log
 R="\e[31m"
 G="\e[32m"
@@ -29,12 +29,12 @@ Validate() {
   
   for i in $@
   do 
-     yum list installed $i
+     yum list installed $i &>>LOGFILE
 
      if [ $? -ne 0 ]
      then
          echo  " $i is not installed..let install it" 
-         yum install $i -y
+         yum install $i -y &>>LOGFILE
          Validate $?  $i
 
      else
