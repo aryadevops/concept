@@ -17,14 +17,15 @@ echo -e "$R ERROR $N: Please Proceed with Root User"
 exit 1
 fi
 
-Validate(){
+Validate() {
 
     if [ $1 -ne 0 ]
     then
       echo -e "$2 installation $R Failure..$N "
     else
       echo -e  "$2 installation $G Success..$G"  
-}
+    fi  
+    }
   
   for i in $@
   do 
