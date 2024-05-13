@@ -13,7 +13,7 @@ B="\e[34m"
 
 if [ $USERID -ne 0 ]
 then
-echo -e "$R ERROR $N: Please Proced wit Root User"
+echo -e "$R ERROR $N: Please Proceed with Root User"
 exit 1
 fi
 
@@ -40,4 +40,3 @@ Validate(){
         echo -e "$Y $i Already Installed..$N" 
      fi 
    done
-       
