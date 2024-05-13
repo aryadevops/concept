@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPTNAME=$0
-DATE=$(date +%F %H:%M:%S)
+DATE=$(date +%F:%H:%M:%S)
 APP_LOGS_DIR=/home/centos/concept/app-logs
 LOGDIR=/home/centos/concept/Shellscript-logs
 LOGFILE=$LOGDIR/$SCRIPTNAME-$DATE.log
